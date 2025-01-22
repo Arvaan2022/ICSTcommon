@@ -36,16 +36,15 @@ android {
     }
 }
 
-publishing {
-    publications {
-        maven(MavenPublication) {
-            groupId = 'com.icst.commonmodule'
-            artifactId = 'IcstCommonModule'
-        }
-    }
-    repositories {
-        maven {
-            url = uri("https://jitpack.io")
+afterEvaluate {
+    publishing {
+        publications {
+            create("release", MavenPublication) {
+                from(components["release"])
+                groupId = "com.icst.commonmodule"
+                artifactId = "IcstCommon"
+                version = "1.0.3"
+            }
         }
     }
 }
