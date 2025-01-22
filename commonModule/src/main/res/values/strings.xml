@@ -1,0 +1,111 @@
+<resources>
+    <string name="app_name">CommonModuleLibrary</string>
+
+    <string name="gp_and_hospital_visits">GP and Hospital visits</string>
+    <string name="by_clickingthe">By clicking the button below, you can download your 12-month diabetes summary to show at your next appointment.</string>
+    <string name="my_copd_summary">My Diabetes Summary</string>
+    <string name="gp_hospital_desc_one">If you’re visiting the GP or hospital, they may change your ongoing management plan whilst you’re there.\n \nMake sure you are getting the right care and choose from the different types of healthcare visits below so that you can go through a care checklist before you go on to update your care plan. </string>
+    <string name="gp_hospital_desc_two">Any changes can can be reviewed in the ‘My COPD Plan’ section of the app. While you’re with them, make sure you are getting the right care by going through the in-app checklist with them before you leave. Choose from different healthcare visits below.</string>
+    <string name="home">Home</string>
+    <string name="my_care_plan">My Care Plan</string>
+    <string name="gp_hospital">Gp Hospital</string>
+    <string name="education">Education</string>
+    <string name="logout">Logout</string>
+    <string name="featured">FEATURED</string>
+    <string name="education_primary_label">The air you breath:\nAllergy and Air quality</string>
+    <string name="education_secondary_label">Every breath you take, it is busy world out\nthere,especially if you…
+    </string>
+
+    <string name="education_read_article">Read full article</string>
+    <string name="education_explore">Explore all education</string>
+    <string name="explore_all_resources">Explore all resources</string>
+    <string name="resources">Resources</string>
+    <string name="helpful_link_websites">Helpful links &amp; websites</string>
+
+    <string name="popular_content">Popular Content</string>
+    <string name="related_videos">Related Videos</string>
+    <string name="finished_reading_que">Finished reading?</string>
+
+
+    <string name="key_is_full_article">key_is_full_article</string>
+    <string name="key_from_sub_adapter">key_from_sub_adapter</string>
+    <string name="key_pdf_data">key_pdf_data</string>
+
+    <string name="time_format">%02d.%02d.%02d minutes</string>
+    <string name="key_from_">key_from_</string>
+    <string name="key_video_id">key_video_id</string>
+    <string name="key_category_id">key_category_id</string>
+    <string name="key_position">key_position</string>
+
+    <string name="search">Search</string>
+    <string name="todo">clicked</string>
+    <string name="education_go">Go</string>
+    <string name="education_inhaler_tyle">Inhaler type</string>
+    <string name="all_videos">All Videos</string>
+    <string name="no_data_available">No data available</string>
+
+    <string name="support_groups">Support Groups</string>
+
+    <string name="contacts_add_btn">Add contact</string>
+    <string name="txt_no_data">You have currently added no contacts,\nadd a contact below</string>
+    <string name="txt_contact_content">Keep all your contacts here in one place for easy access</string>
+
+    <string name="new_contact_save">Save</string>
+    <string name="new_contact_email">Add email</string>
+    <string name="new_contact_title">New contact</string>
+    <string name="new_contact_fname">First name</string>
+    <string name="new_contact_lname">Last name</string>
+    <string name="new_contact_work">Work address</string>
+    <string name="new_contact_with">Job title</string>
+    <string name="new_contact_add_phone">Add phone</string>
+
+    <string name="error_lname">Enter your Last Name</string>
+    <string name="error_work_place">Enter your work place</string>
+    <string name="txt_doctor">Doctor (GP)</string>
+    <string name="txt_nurse">Nurse</string>
+    <string name="txt_hospital">Hospital consultant</string>
+
+    <string name="month_october">October</string>
+    <string name="reminder_desc">Add reminder details and keep track of them using this section of the app, you will be reminded of these reminders when they are coming up.</string>
+    <string name="choose_activity_schedule">Event or Activity</string>
+    <string name="location">Location</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="nav_reminder">Reminder</string>
+    <string name="please_select_days">Please select days</string>
+    <string name="save">Save</string>
+    <string name="time">Time</string>
+
+    <string name="Monday">Monday</string>
+    <string name="Tuesday">Tuesday</string>
+    <string name="Wednesday">Wednesday</string>
+    <string name="Thursday">Thursday</string>
+    <string name="Friday">Friday</string>
+    <string name="Saturday">Saturday</string>
+    <string name="Sunday">Sunday</string>
+
+    <string name="please_select_schedule">Please select days</string>
+    <string name="never_schedule">Never</string>
+    <string name="schedule_schedule">Reminder</string>
+    <string name="event_or_activity">Event or activity</string>
+
+
+    <string-array name="english_week_string_array">
+        <item>Sun</item>
+        <item>Mon</item>
+        <item>Tue</item>
+        <item>Wed</item>
+        <item>Thu</item>
+        <item>Fri</item>
+        <item>Sat</item>
+    </string-array>
+
+    <string name="no_surgery_data">You have currently added no surgeries, add a surgery below</string>
+    <string name="add_surgery">Change surgery</string>
+    <string name="txt_submit">Submit\n</string>
+    <string name="txt_choose_surgery">Type surgery</string>
+    <string name="txt_error_surgery">Please enter the name of your GP surgery. If it does not appear, please try connecting to mobile data. If you do this and are still having problems press the \'need help\' button below.</string>
+
+    <string name="txt_Past">Past</string>
+    <string name="txt_current">Current</string>
+</resources>

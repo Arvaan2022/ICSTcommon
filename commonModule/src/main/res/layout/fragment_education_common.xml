@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frag_education_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".design.fragment.education.EducationFragment"
+        android:background="@color/setting_separate_bar">
+
+        <include
+            android:id="@+id/education_toolbar"
+            layout="@layout/common_module_toolbar"
+            android:visibility="visible" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/ll_education"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/setting_separate_bar"
+            android:fillViewport="true"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/education_toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/includeEducation"
+                    layout="@layout/include_education_common" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

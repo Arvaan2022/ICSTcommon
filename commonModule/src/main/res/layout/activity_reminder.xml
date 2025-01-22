@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/parent_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/common_module_toolbar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/_6sdp"
+            android:paddingBottom="@dimen/_6sdp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/text_month"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/opensans_semibold"
+                android:gravity="center"
+                android:text="@string/month_october"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_toEndOf="@+id/text_month"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/todo"
+                android:paddingTop="@dimen/_4sdp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.haibin.calendarview.CalendarLayout
+                android:id="@+id/calendarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white_alpha_25"
+                android:orientation="vertical"
+                app:calendar_content_view_id="@+id/recycler_calendar"
+                app:default_status="expand">
+
+
+                <com.haibin.calendarview.CalendarView
+                    android:id="@+id/calendar_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:calendar_padding="@dimen/_2sdp"
+                    app:current_month_lunar_text_color="@color/transparant"
+                    app:day_text_size="@dimen/_13sdp"
+                    app:lunar_text_size="0sp"
+                    app:max_year="2050"
+                    app:max_year_day="31"
+                    app:max_year_month="12"
+                    app:min_year_day="1"
+                    app:min_year_month="1"
+                    app:month_view="com.icst.commonmodule.common.CustomMonthView"
+                    app:month_view_show_mode="mode_only_current"
+                    app:selected_lunar_text_color="@color/transparant"
+                    app:selected_text_color="@color/white"
+                    app:selected_theme_color="@color/btn_blue"
+                    app:week_bar_height="@dimen/_15sdp"
+                    app:week_bar_view="com.icst.commonmodule.common.CustomWeekBar"
+                    app:week_start_with="sun"
+                    app:week_text_size="@dimen/_10sdp"
+                    app:week_view="com.icst.commonmodule.common.CustomWeekView" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_calendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white" />
+
+            </com.haibin.calendarview.CalendarLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/ic_add_appoinmnet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_40sdp"
+                android:src="@drawable/ic_add_black_24dp"
+                app:backgroundTint="@color/btn_blue"
+                app:fabCustomSize="@dimen/_38sdp"
+                app:rippleColor="@color/white_alpha_25" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

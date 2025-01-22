@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="hint">#797979</color>
+    <color name="black">#FF000000</color>
+    <color name="white_alpha_25">#40FFFFFF</color>
+    <color name="btn_blue">#214579</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="address_color">#939393</color>
+    <color name="setting_separate_bar">#f2efef</color>
+    <color name="black_alpha_10">#1A000000</color>
+    <color name="list_separator">#C6C6C6</color>
+    <color name="trigger_tips">#a2a2a2</color>
+    <color name="Grey_400">#BDBDBD</color>
+    <color name="color_pdf_divider_line">#D5D7DE</color>
+    <color name="blue">#21447A</color>
+    <color name="setting_header_bg">#FDFDFD</color>
+    <color name="seperator">#F6F4F5</color>
+    <color name="setting_text_color">#b9b9b9</color>
+    <color name="Grey_800">#424242</color>
+    <color name="transparant">#00000000</color>
+    <color name="blue_ripple">#C6214579</color>
+    <color name="new_contact_border">#DCDCDC</color>
+    <color name="blue_primary">#214579</color>
+    <color name="black_alpha_80">#CC000000</color>
+    <color name="colorChartRed">#e03a26</color>
+    <color name="edt_login_border">#D6D6D6</color>
+    <color name="Grey_100">#F5F5F5</color>
+    <color name="Grey_50">#FAFAFA</color>
+</resources>

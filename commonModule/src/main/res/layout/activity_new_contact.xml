@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/new_contact_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white">
+
+            <include
+                android:id="@+id/new_app_include"
+                layout="@layout/common_module_toolbar" />
+
+            <EditText
+                android:id="@+id/new_contact_fname"
+                style="@style/new_appointment_edit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:hint="@string/new_contact_fname"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                app:layout_constraintTop_toBottomOf="@id/new_app_include"
+                android:fontFamily="@font/opensans_regular" />
+
+            <EditText
+                android:id="@+id/new_contact_lname"
+                style="@style/new_appointment_edit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="@string/new_contact_lname"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                app:layout_constraintTop_toBottomOf="@id/new_contact_fname"
+                android:fontFamily="@font/opensans_regular" />
+
+            <RelativeLayout
+                android:id="@+id/ll_contact_with"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:background="@drawable/edt_login_field"
+                app:layout_constraintTop_toBottomOf="@id/new_contact_lname">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sp_contact_with"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@android:color/transparent"
+                    android:spinnerMode="dropdown"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/tv_contact_with"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:hint="@string/new_contact_with"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:textColor="@color/hint"
+                    android:textColorHint="@color/hint"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/opensans_regular"
+                    tools:ignore="RtlSymmetry" />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/new_contact_work_place"
+                style="@style/new_appointment_edit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="@string/new_contact_work"
+                android:imeOptions="actionNext"
+                android:inputType="textCapSentences"
+                app:layout_constraintTop_toBottomOf="@id/ll_contact_with"
+                android:fontFamily="@font/opensans_regular" />
+
+            <EditText
+                android:id="@+id/newContactPhone"
+                style="@style/new_appointment_edit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_32sdp"
+                android:digits="0123456789"
+                android:hint="@string/new_contact_add_phone"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:maxLength="14"
+                app:layout_constraintTop_toBottomOf="@id/new_contact_work_place"
+                android:fontFamily="@font/opensans_regular"/>
+
+            <EditText
+                android:id="@+id/new_contact_email"
+                style="@style/new_appointment_edit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="@string/new_contact_email"
+                android:imeOptions="actionDone"
+                android:inputType="textEmailAddress"
+                app:layout_constraintTop_toBottomOf="@id/newContactPhone"
+                android:fontFamily="@font/opensans_regular" />
+
+            <Button
+                android:id="@+id/new_contact_btn_save"
+                style="@style/new_appointment_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:text="@string/new_contact_save"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/new_contact_email"
+                android:fontFamily="@font/opensans_regular"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

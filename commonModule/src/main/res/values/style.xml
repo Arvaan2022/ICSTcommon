@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="gpHospitalDescription">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/_11sdp</item>
+        <item name="android:fontFamily">@font/opensans_regular</item>
+    </style>
+
+    <style name="edu_primary_label">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="edu_secondary_label">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="video_player_title">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/_13sdp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:layout_marginStart">@dimen/_16sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_16sdp</item>
+        <item name="android:layout_marginTop">@dimen/_16sdp</item>
+    </style>
+
+    <style name="video_player_duration">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/_9sdp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_marginStart">@dimen/_16sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_16sdp</item>
+        <item name="android:layout_marginTop">@dimen/_4sdp</item>
+    </style>
+
+    <style name="video_player_desc">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:layout_marginStart">@dimen/_16sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_16sdp</item>
+        <item name="android:layout_marginTop">@dimen/_4sdp</item>
+    </style>
+
+    <style name="article_title">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/_17sdp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:layout_marginStart">@dimen/_10sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_10sdp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/_5sdp</item>
+    </style>
+
+    <style name="article_title.tips">
+        <item name="android:textColor">@color/trigger_tips</item>
+        <item name="android:textSize">@dimen/_9sdp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:layout_marginStart">@dimen/_10sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_10sdp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/_15sdp</item>
+    </style>
+
+    <style name="search_trigger">
+        <item name="android:textColorHint">@color/trigger_tips</item>
+        <item name="android:textColor">@color/trigger_tips</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:drawablePadding">@dimen/_8sdp</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:background">@null</item>
+        <item name="android:drawableStart">@drawable/ic_search_light_grey</item>
+    </style>
+
+    <style name="education_list_title">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/_11sdp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:layout_marginStart">@dimen/_30sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_10sdp</item>
+        <item name="android:layout_marginTop">@dimen/_20sdp</item>
+    </style>
+
+    <style name="education_video_title">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:maxEms">10</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_marginTop">@dimen/_7sdp</item>
+    </style>
+    <style name="education_video_desc">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/_9sdp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="contact_designation">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxEms">18</item>
+        <item name="android:layout_marginStart">@dimen/_30sdp</item>
+        <item name="android:layout_marginTop">@dimen/_15sdp</item>
+    </style>
+    <style name="contact_work_place">
+        <item name="android:textColor">@color/address_color</item>
+        <item name="android:textSize">@dimen/_9sdp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxEms">18</item>
+        <item name="android:layout_marginStart">@dimen/_30sdp</item>
+        <item name="android:layout_marginTop">@dimen/_2sdp</item>
+    </style>
+
+    <style name="contact_name_tag">
+        <item name="android:background">@drawable/circle_dynamic</item>
+        <item name="android:textSize">@dimen/_13sdp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:maxLength">2</item>
+        <item name="android:layout_marginTop">@dimen/_17sdp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="contact_name">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxEms">17</item>
+        <item name="android:textAlignment">textStart</item>
+    </style>
+
+    <style name="contacts_btn">
+        <item name="android:background">@drawable/btn_blue_radius</item>
+        <item name="android:layout_marginStart">@dimen/_45sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_45sdp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/_11sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_25sdp</item>
+        <item name="android:stateListAnimator">@drawable/state_list_animator_press</item>
+    </style>
+
+    <style name="AlertDialogDanger" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/btn_blue</item>
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="new_appointment_edit">
+        <item name="android:layout_marginStart">@dimen/_25sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_25sdp</item>
+        <item name="android:background">@drawable/edt_login_field</item>
+        <item name="android:textColorHint">@color/hint</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:paddingStart">@dimen/_15sdp</item>
+        <item name="android:paddingEnd">@dimen/_8sdp</item>
+        <item name="android:textColor">@color/hint</item>
+    </style>
+
+    <style name="new_appointment_btn">
+        <item name="android:background">@drawable/btn_blue_radius</item>
+        <item name="android:layout_marginStart">@dimen/_45sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_45sdp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/_11sdp</item>
+        <item name="android:layout_marginTop">@dimen/_35sdp</item>
+        <item name="android:stateListAnimator">@drawable/state_list_animator_press</item>
+    </style>
+
+    <style name="appointment_editText">
+        <item name="android:layout_marginStart">@dimen/_25sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_25sdp</item>
+        <item name="android:background">@drawable/edt_login_field</item>
+        <item name="android:textColorHint">@color/hint</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:paddingEnd">@dimen/_8sdp</item>
+        <item name="android:textColor">@color/hint</item>
+    </style>
+</resources>

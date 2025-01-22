@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/row_contact_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/setting_header_bg">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/seperator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/row_tv_contact_designation"
+            style="@style/contact_designation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            android:fontFamily="@font/opensans_regular"
+            tools:text="Doctor (GP)" />
+
+        <TextView
+            android:id="@+id/row_tv_contact_work_place"
+            style="@style/contact_work_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            app:layout_constraintStart_toStartOf="@+id/row_tv_contact_designation"
+            app:layout_constraintTop_toBottomOf="@+id/row_tv_contact_designation"
+            android:fontFamily="@font/opensans_semibold"
+            tools:text="Thornhill Medical Center" />
+
+        <TextView
+            android:id="@+id/row_tv_contact_tag"
+            style="@style/contact_name_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintStart_toStartOf="@+id/row_tv_contact_work_place"
+            app:layout_constraintTop_toBottomOf="@+id/row_tv_contact_work_place"
+            android:fontFamily="@font/opensans_regular"
+            tools:text="DU" />
+
+        <LinearLayout
+            android:id="@+id/ll_row_contact_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="6dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/row_tv_contact_tag"
+            app:layout_constraintTop_toTopOf="@+id/row_tv_contact_tag">
+
+            <TextView
+                android:id="@+id/row_tv_contact_name"
+                style="@style/contact_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.60"
+                android:fontFamily="@font/opensans_regular"
+                tools:text="Dr. James Bullstone " />
+
+            <ImageView
+                android:id="@+id/row_ib_contact_msg"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_weight="0.1"
+                android:background="?attr/selectableItemBackground"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_msg" />
+
+            <ImageView
+                android:id="@+id/row_ib_contact_call"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_weight="0.1"
+                android:background="?attr/selectableItemBackground"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_call" />
+
+            <ImageView
+                android:id="@+id/row_ib_contact_remove"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_weight="0.1"
+                android:background="?attr/selectableItemBackground"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_remove" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_weight="0.1"
+                android:padding="@dimen/_5sdp"
+                tools:src="@null" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@color/seperator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/row_tv_contact_tag" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="response"
+            type="com.icst.commonmodule.model.EducationContent" />
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:background="#FAFAFA"
+        android:orientation="vertical"
+        tools:ignore="HardcodedText">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2">
+
+            <!--Video container view 1-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ll_video_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:categoryId="@{response.data.educationData[0].categoryId}"
+                app:contentType="@{response.data.educationData[0].type}"
+                app:educationResponse="@{response}"
+                app:positionArray="@{0}"
+                app:videoId="@{response.data.educationData[0].id}"
+                android:layout_weight="1"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="start"
+                android:orientation="vertical"
+                tools:ignore="UnusedAttribute">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_90sdp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_90sdp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        app:cardCornerRadius="@dimen/_5sdp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imgVideo1Thumb"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitXY"
+                                app:setImageUri="@{response.data.educationData[0].videoThumb}"
+                                tools:src="@tools:sample/avatars" />
+
+                            <ImageView
+                                android:id="@+id/rowEducationVideoPlay1"
+                                android:layout_width="@dimen/_28sdp"
+                                android:layout_height="@dimen/_28sdp"
+                                app:gone="@{!response.data.educationData[0].playIconHideOrGone()}"
+                                android:src="@drawable/ic_playbutton"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_video_1_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:fontFamily="@font/opensans_bold"
+                    android:gravity="start"
+                    android:text="@{response.data.educationData[0].name}"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_10sdp"
+                    tools:text="After hospital sdfsdfsfdsdffdsdf" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_education_video_play_1"
+                        android:layout_width="@dimen/_18sdp"
+                        app:setDrawable="@{response.data.educationData[0].setDrawable()}"
+                        android:layout_height="@dimen/_18sdp" />
+
+<!--                    android:text="@{response.data.educationData[0].minute+minutes}"-->
+                    <TextView
+                        android:id="@+id/tv_video_time_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="start"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp"
+                        tools:text="10 minutes" />
+
+                </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <!--Video container view 2-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llVideo2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="end"
+                app:categoryId="@{response.data.educationData[1].categoryId}"
+                app:contentType="@{response.data.educationData[1].type}"
+                app:educationResponse="@{response}"
+                app:positionArray="@{1}"
+                app:videoId="@{response.data.educationData[1].id}"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_90sdp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_90sdp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        app:cardCornerRadius="@dimen/_5sdp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imgVideo2Thumb"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitXY"
+                                app:setImageUri="@{response.data.educationData[1].videoThumb}"
+                                tools:src="@tools:sample/avatars" />
+
+                            <ImageView
+                                android:id="@+id/rowEducationVideoPlay2"
+                                android:layout_width="@dimen/_28sdp"
+                                android:layout_height="@dimen/_28sdp"
+                                android:src="@drawable/ic_playbutton"
+                                app:gone="@{!response.data.educationData[1].playIconHideOrGone()}"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_video_2_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:fontFamily="@font/opensans_bold"
+                    android:gravity="start"
+                    android:text="@{response.data.educationData[1].name}"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_10sdp"
+                    tools:text="After hospital discharge....sdfsffsdfffsdfsdsfdsdffsdf" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_education_video_play_2"
+                        android:layout_width="@dimen/_18sdp"
+                        android:layout_height="@dimen/_18sdp"
+                        app:setDrawable="@{response.data.educationData[1].setDrawable()}"/>
+
+                    <TextView
+                        android:id="@+id/tv_video_time_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="start"
+
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp"
+                        tools:text="10 minutes" />
+
+                </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+
+            android:weightSum="2">
+
+            <!--Video container view 3-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ll_video_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="start"
+                android:orientation="vertical"
+                app:categoryId="@{response.data.educationData[2].categoryId}"
+                app:contentType="@{response.data.educationData[2].type}"
+                app:educationResponse="@{response}"
+                app:positionArray="@{2}"
+                app:videoId="@{response.data.educationData[2].id}"
+                tools:ignore="UnusedAttribute">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_90sdp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_90sdp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        app:cardCornerRadius="@dimen/_5sdp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imgVideo3Thumb"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitXY"
+                                app:setImageUri="@{response.data.educationData[2].videoThumb}"
+                                tools:src="@tools:sample/avatars" />
+
+                            <ImageView
+                                android:id="@+id/rowEducationVideoPlay3"
+                                android:layout_width="@dimen/_28sdp"
+                                android:layout_height="@dimen/_28sdp"
+                                android:src="@drawable/ic_playbutton"
+                                app:gone="@{!response.data.educationData[2].playIconHideOrGone()}"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_video_3_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:fontFamily="@font/opensans_bold"
+                    android:gravity="start"
+                    android:text="@{response.data.educationData[2].name}"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_10sdp"
+                    tools:text="After hospital discharge....sdfsdfsfsdfsdfsdfs" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_education_video_play_3"
+                        android:layout_width="@dimen/_18sdp"
+                        android:layout_height="@dimen/_18sdp"
+                        app:setDrawable="@{response.data.educationData[2].setDrawable()}"
+                         />
+
+                    <TextView
+                        android:id="@+id/tv_video_time_three"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="start"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp"
+                        tools:text="10 minutes" />
+
+                </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <!--Video container view 4-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ll_video_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="end"
+                android:orientation="vertical"
+                app:categoryId="@{response.data.educationData[3].categoryId}"
+                app:contentType="@{response.data.educationData[3].type}"
+                app:educationResponse="@{response}"
+                app:positionArray="@{3}"
+                app:videoId="@{response.data.educationData[3].id}"
+                tools:ignore="UnusedAttribute">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_90sdp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_90sdp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        app:cardCornerRadius="@dimen/_5sdp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imgVideo4Thumb"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitXY"
+                                app:setImageUri="@{response.data.educationData[3].videoThumb}"
+                                tools:src="@tools:sample/avatars" />
+
+                            <ImageView
+                                android:id="@+id/rowEducationVideoPlay4"
+                                android:layout_width="@dimen/_28sdp"
+                                android:layout_height="@dimen/_28sdp"
+                                android:src="@drawable/ic_playbutton"
+                                app:gone="@{!response.data.educationData[3].playIconHideOrGone()}"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_video_4_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:fontFamily="@font/opensans_bold"
+                    android:gravity="start"
+                    android:text="@{response.data.educationData[3].name}"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_10sdp"
+                    tools:text="After hospital discharge....ewefwefwefwefwefwe" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_education_video_play_4"
+                        android:layout_width="@dimen/_18sdp"
+                        android:layout_height="@dimen/_18sdp"
+                        app:setDrawable="@{response.data.educationData[3].setDrawable()}"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_video_time_four"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="start"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp"
+                        tools:text="10 minutes" />
+
+                </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

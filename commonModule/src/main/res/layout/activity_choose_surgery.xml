@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/parent_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".views.activity.surgery.ChooseSurgeryActivity">
+
+        <include
+            android:id="@+id/include2"
+            layout="@layout/common_module_toolbar" />
+
+        <LinearLayout
+            android:id="@+id/llivfPracticeAddress"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:background="@drawable/ll_surgery_round_corner"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <Spinner
+                android:id="@+id/sp_gp_surgery_add_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:dropDownWidth="@dimen/_245sdp"
+                android:dropDownSelector="@color/white"
+                android:spinnerMode="dropdown" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:background="@drawable/ll_surgery_round_corner"
+            android:gravity="center">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextViewAgainSelectLabName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:completionThreshold="1"
+                android:ems="10"
+                android:gravity="start"
+                android:hint="@string/txt_choose_surgery"
+                android:imeOptions="actionDone"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/_13sdp"
+                tools:ignore="LabelFor" />
+
+            <ImageView
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:rotation="270"
+                android:src="@drawable/ic_arrow_back" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_gp_surgery_add"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:layout_marginBottom="@dimen/_25sdp"
+            android:background="@drawable/btn_blue_radius"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/txt_submit"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp" />
+    </LinearLayout>
+</layout>

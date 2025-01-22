@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/new_app_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".views.activity.appoitments.AddScheduleEventActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white">
+
+            <include
+                android:id="@+id/new_app_include"
+                layout="@layout/common_module_toolbar" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_header_add_event"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue_primary"
+                android:orientation="vertical"
+                android:padding="@dimen/_15sdp"
+                app:layout_constraintTop_toBottomOf="@id/new_app_include">
+
+                <TextView
+                    android:id="@+id/tv_add_event_activity_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:text="@string/reminder_desc"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/opensans_regular" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_spiner_type"
+                style="@style/appointment_editText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_42sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_header_add_event">
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/act_add_schedule_event_activity"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_42sdp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:fontFamily="@font/opensans_regular"
+                    android:gravity="start|center"
+                    android:hint="@string/choose_activity_schedule"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@id/edt_add_schedule_location"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:paddingEnd="@dimen/_15sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/hint"
+                    android:textColorHint="@color/hint"
+                    android:textSize="@dimen/_12sdp"
+                    tools:ignore="LabelFor" />
+
+
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/new_schedule_edt_app"
+                style="@style/new_appointment_edit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_42sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:hint="Event or Activity"
+                android:imeOptions="actionDone"
+                android:inputType="textCapSentences"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/ll_header_add_event"
+                android:fontFamily="@font/opensans_regular"
+               />
+
+            <EditText
+                android:id="@+id/edt_add_schedule_location"
+                style="@style/new_appointment_edit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_42sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="@string/location"
+                android:imeOptions="actionDone"
+                android:nextFocusDown="@id/edt_add_schedule_start_date"
+                android:inputType="textCapSentences"
+                app:layout_constraintTop_toBottomOf="@id/ll_spiner_type"
+                android:fontFamily="@font/opensans_regular"  />
+
+            <TextView
+                android:id="@+id/edt_add_schedule_start_date"
+                style="@style/new_appointment_edit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_42sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:nextFocusDown="@id/edt_add_schedule_end_date"
+                android:hint="@string/start_date"
+                app:layout_constraintTop_toBottomOf="@id/edt_add_schedule_location"
+                android:fontFamily="@font/opensans_regular" />
+
+            <TextView
+                android:id="@+id/edt_add_schedule_end_date"
+                style="@style/new_appointment_edit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_42sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:hint="@string/end_date"
+                app:layout_constraintTop_toBottomOf="@id/edt_add_schedule_start_date"
+                android:fontFamily="@font/opensans_regular"  />
+
+            <TextView
+                android:id="@+id/edtAddScheduleTime"
+                style="@style/new_appointment_edit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_42sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:nextFocusDown="@id/spAddScheduleSchedule"
+                android:hint="@string/time"
+                app:layout_constraintTop_toBottomOf="@id/edt_add_schedule_end_date"
+                android:fontFamily="@font/opensans_regular"  />
+
+            <RelativeLayout
+                android:id="@+id/ll_schedule_sp"
+                style="@style/appointment_editText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                app:layout_constraintTop_toBottomOf="@id/edtAddScheduleTime">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spAddScheduleSchedule"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/nav_reminder"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:paddingEnd="@dimen/_8sdp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_schedule_sp_choose"
+                style="@style/appointment_editText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_42sdp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/ll_schedule_sp">
+
+                <com.icst.commonmodule.common.DayMultiSelectionSpinner
+                    android:id="@+id/spAddScheduleChooseSchedule"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_42sdp"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/nav_reminder"
+                    android:accessibilityPaneTitle="@string/please_select_days"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:spinnerMode="dropdown" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnAddScheduleSave"
+                style="@style/new_appointment_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:text="@string/save"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_schedule_sp_choose"
+                app:layout_constraintVertical_bias="0.0"
+                android:fontFamily="@font/opensans_regular"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>
