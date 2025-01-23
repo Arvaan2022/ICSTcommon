@@ -1,6 +1,7 @@
 package com.icst.commonmodule.app
 
 import android.app.Application
+import com.icst.commonmodule.R
 
 class App:Application(){
 
@@ -10,6 +11,7 @@ class App:Application(){
         var url : String = ""
         var language =""
         var token =""
+        var appLogo:Int = R.drawable.ic_circle_tick
 
 
         fun getAppointmentAdd(): Boolean {

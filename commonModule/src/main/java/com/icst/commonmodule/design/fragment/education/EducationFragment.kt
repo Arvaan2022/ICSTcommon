@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.icst.commonmodule.app.App
 import com.icst.commonmodule.databinding.FragmentEducationCommonBinding
 import com.icst.commonmodule.design.activity.educationVideoList.EducationVideoListActivity
 import com.icst.commonmodule.design.activity.resources.ResourcesActivity
@@ -25,6 +26,8 @@ class EducationFragment: Fragment(){
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentEducationCommonBinding.inflate(inflater, container, false)
+
+        binding.educationToolbar.toolbarLogo.setImageResource(App.appLogo)
 
         observer()
         onClickView()
