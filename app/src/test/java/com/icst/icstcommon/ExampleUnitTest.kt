@@ -1,4 +1,4 @@
-package com.icst.icstcommon
+package com.icst.commonmodule
 
 import org.junit.Test
 
