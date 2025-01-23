@@ -1,5 +1,5 @@
 [versions]
-agp = "8.6.1"
+agp = "8.2.2"
 androidGifDrawable = "1.2.24"
 androidpdfviewer = "2.8.1"
 calendarview = "3.7.1.42"
