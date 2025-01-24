@@ -41,7 +41,17 @@ fun ImageView.loadImage(
         .into(this)
 
 }
+fun ImageView.loadImage(
+    imgUrl: Int,
+    @DrawableRes placeholder: Int = R.drawable.ic_launcher_background
+) {
+    Glide
+        .with(this)
+        .load(imgUrl)
+        .placeholder(placeholder)
+        .into(this)
 
+}
 
  fun setMinuteText(hour: String, min: String, sec: String): String {
 
