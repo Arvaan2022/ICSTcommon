@@ -5,7 +5,7 @@ import com.icst.commonmodule.retrofit.ApiClient
 import com.icst.commonmodule.retrofit.ApiResponseData
 import com.icst.commonmodule.retrofit.Resource
 import com.icst.commonmodule.utils.Constant
-import com.icst.commonmodule.utils.isNetWork
+import com.icst.commonmodule.utils.checkNetworkAvailableOrNot
 import retrofit2.Response
 
 class ChooseSurgeryRepository {
@@ -25,7 +25,7 @@ class ChooseSurgeryRepository {
     }
 
     suspend fun getRegisterSurgeryList(context: Context): Resource<Any?> {
-        val responseData: ApiResponseData = if (isNetWork(context)) {
+        val responseData: ApiResponseData = if (checkNetworkAvailableOrNot(context)) {
             val response = apiClient.getRegisterSurgeryList()
             val responseBody = response.body()
 
@@ -47,7 +47,7 @@ class ChooseSurgeryRepository {
 
 
     suspend fun surgeryChangeApiCall(id: String,context: Context): Resource<Any?> {
-        val responseData: ApiResponseData = if (isNetWork(context)) {
+        val responseData: ApiResponseData = if (checkNetworkAvailableOrNot(context)) {
             val response = apiClient.surgeryChangeApiCall(id = id)
             val responseBody = response.body()
 

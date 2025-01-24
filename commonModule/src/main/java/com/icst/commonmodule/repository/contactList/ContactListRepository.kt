@@ -6,7 +6,7 @@ import com.icst.commonmodule.retrofit.ApiClient
 import com.icst.commonmodule.retrofit.ApiResponseData
 import com.icst.commonmodule.retrofit.Resource
 import com.icst.commonmodule.utils.Constant.handleApiData
-import com.icst.commonmodule.utils.isNetWork
+import com.icst.commonmodule.utils.checkNetworkAvailableOrNot
 
 import retrofit2.Response
 
@@ -27,7 +27,7 @@ class ContactListRepository{
     }
 
     suspend fun contactListApiCall(context: Context): Resource<Any?> {
-        val responseData: ApiResponseData = if (isNetWork(context)) {
+        val responseData: ApiResponseData = if (checkNetworkAvailableOrNot(context)) {
             val response = apiClient.contactListApiCall()
             val responseBody = response.body()
 
@@ -48,7 +48,7 @@ class ContactListRepository{
         id: Int,
         context: Context
     ): Resource<Any?> {
-        val responseData: ApiResponseData = if (isNetWork(context)) {
+        val responseData: ApiResponseData = if (checkNetworkAvailableOrNot(context)) {
             val response = apiClient.deleteContactApiCall(id)
             val responseBody = response.body()
 

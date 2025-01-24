@@ -5,7 +5,7 @@ import com.icst.commonmodule.retrofit.ApiClient
 import com.icst.commonmodule.retrofit.ApiResponseData
 import com.icst.commonmodule.retrofit.Resource
 import com.icst.commonmodule.utils.Constant.handleApiData
-import com.icst.commonmodule.utils.isNetWork
+import com.icst.commonmodule.utils.checkNetworkAvailableOrNot
 import retrofit2.Response
 
 class VideoPlayerRepository {
@@ -28,7 +28,7 @@ class VideoPlayerRepository {
         id: Int,
        context: Context
     ): Resource<Any?> {
-        val responseData: ApiResponseData = if (isNetWork(context)) {
+        val responseData: ApiResponseData = if (checkNetworkAvailableOrNot(context)) {
             val response =
                 apiClient.getCategoryVideos(id = id,)
             val responseBody = response.body()
@@ -51,7 +51,7 @@ class VideoPlayerRepository {
         slug: String,
        context: Context
     ): Resource<Any?> {
-        val responseData: ApiResponseData = if (isNetWork(context)) {
+        val responseData: ApiResponseData = if (checkNetworkAvailableOrNot(context)) {
             val response = apiClient.getVideoCount(
                 id = id,
                 slug = slug
@@ -75,7 +75,7 @@ class VideoPlayerRepository {
         videoId: String,
        context: Context
     ): Resource<Any?> {
-        val responseData: ApiResponseData = if (isNetWork(context)) {
+        val responseData: ApiResponseData = if (checkNetworkAvailableOrNot(context)) {
             val response = apiClient.storeVideoCount(id=videoId)
             val responseBody = response.body()
 
@@ -98,7 +98,7 @@ class VideoPlayerRepository {
         id: String,
         context: Context
     ): Resource<Any?> {
-        val responseData: ApiResponseData = if (isNetWork(context)) {
+        val responseData: ApiResponseData = if (checkNetworkAvailableOrNot(context)) {
             val response = apiClient.getTaskEducationVideoApi(id = id)
             val responseBody = response.body()
 

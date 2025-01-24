@@ -1,9 +1,7 @@
 package com.icst.commonmodule.utils.extension
 
-import android.app.Activity
 import android.content.Intent
 import android.view.View
-import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
@@ -24,34 +22,6 @@ import com.icst.commonmodule.utils.TAG
 fun bindGone(view: View, shouldBeGone: Boolean) {
     view.gone(shouldBeGone)
 }
-
-@BindingAdapter("gone")
-fun bindGone(view: ViewGroup, shouldBeGone: Boolean) {
-    view.gone(shouldBeGone)
-}
-
-
-@BindingAdapter("onBackPressed")
-fun bindOnBackPressed(view: View, finish: Boolean) {
-    val context = view.context
-    if (finish && context is Activity) {
-        view.setOnClickListener {
-            context.onBackPressed()
-        }
-    }
-}
-
-
-@BindingAdapter("onClick")
-fun onClick(view: View, onClick: () -> Unit) {
-    view.setOnClickListener {
-        onClick()
-    }
-}
-
-
-
-
 
 @BindingAdapter("setImageUri")
 fun setImageUri(

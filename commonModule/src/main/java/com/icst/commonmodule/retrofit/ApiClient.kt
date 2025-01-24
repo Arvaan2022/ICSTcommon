@@ -11,7 +11,6 @@ import com.icst.commonmodule.model.EducationList
 import com.icst.commonmodule.model.EducationResourceCategoryModel
 import com.icst.commonmodule.model.EducationResourceModel
 import com.icst.commonmodule.model.EducationVideoTaskModel
-import com.icst.commonmodule.model.GetGPHospitalCategoryModel
 import com.icst.commonmodule.model.GetVideoCountModel
 import com.icst.commonmodule.model.GpSurgeryModel
 import com.icst.commonmodule.model.ListScheduleModel
@@ -22,17 +21,6 @@ import retrofit2.Response
 
 class ApiClient {
 
-
-    suspend fun getGpHospitalCategoryApiCall(
-        language: String,
-        token: String,
-        url: String
-    ): Response<GetGPHospitalCategoryModel> {
-        return ApiInitialize.initialize(url).getGpHospitalCategory(
-            language = language,
-            inToken = "Bearer $token"
-        )
-    }
 
     suspend fun getEducationData(
     ): Response<EducationContent> {

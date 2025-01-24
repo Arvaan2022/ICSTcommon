@@ -5,7 +5,7 @@ import com.icst.commonmodule.retrofit.ApiClient
 import com.icst.commonmodule.retrofit.ApiResponseData
 import com.icst.commonmodule.retrofit.Resource
 import com.icst.commonmodule.utils.Constant.handleApiData
-import com.icst.commonmodule.utils.isNetWork
+import com.icst.commonmodule.utils.checkNetworkAvailableOrNot
 import retrofit2.Response
 
 class EducationRepository {
@@ -27,7 +27,7 @@ class EducationRepository {
     suspend fun getEducationData(
         context: Context
     ): Resource<Any?> {
-        val responseData: ApiResponseData = if (isNetWork(context)) {
+        val responseData: ApiResponseData = if (checkNetworkAvailableOrNot(context)) {
             val response = apiClient.getEducationData()
             val responseBody = response.body()
 

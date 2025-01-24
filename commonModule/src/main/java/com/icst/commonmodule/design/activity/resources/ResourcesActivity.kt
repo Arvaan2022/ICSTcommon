@@ -18,7 +18,7 @@ import com.icst.commonmodule.utils.Constant
 import com.icst.commonmodule.utils.Constant.EDU_RESOURCE_ID
 import com.icst.commonmodule.utils.Constant.EDU_RESOURCE_SUBTITLE
 import com.icst.commonmodule.utils.Constant.EDU_RESOURCE_TITLE
-import com.icst.commonmodule.utils.isNetWork
+import com.icst.commonmodule.utils.checkNetworkAvailableOrNot
 
 
 class ResourcesActivity : ActivityBase() {
@@ -51,7 +51,7 @@ class ResourcesActivity : ActivityBase() {
     }
 
     private fun requestApiGetResources() {
-        if (isNetWork(this)) {
+        if (checkNetworkAvailableOrNot(this)) {
             viewModel.getEducationResourceCategoryApiCall(
                 context = this
             )

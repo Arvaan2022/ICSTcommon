@@ -5,7 +5,7 @@ import com.icst.commonmodule.retrofit.ApiClient
 import com.icst.commonmodule.retrofit.ApiResponseData
 import com.icst.commonmodule.retrofit.Resource
 import com.icst.commonmodule.utils.Constant.handleApiData
-import com.icst.commonmodule.utils.isNetWork
+import com.icst.commonmodule.utils.checkNetworkAvailableOrNot
 import retrofit2.Response
 
 class AddScheduleEventRepository{
@@ -25,7 +25,7 @@ class AddScheduleEventRepository{
     }
 
     suspend fun getScheduleApiCall(context: Context): Resource<Any?> {
-        val responseData: ApiResponseData = if (isNetWork(context)) {
+        val responseData: ApiResponseData = if (checkNetworkAvailableOrNot(context)) {
             val response = apiClient.getScheduleApiCall()
             val responseBody = response.body()
 
@@ -53,7 +53,7 @@ class AddScheduleEventRepository{
         scheduleDay: String,
         context: Context
     ): Resource<Any?> {
-        val responseData: ApiResponseData = if (isNetWork(context)) {
+        val responseData: ApiResponseData = if (checkNetworkAvailableOrNot(context)) {
             val response = apiClient.addSchedule(   reminder = reminder,
                 location = location,
                 date = date,
@@ -89,7 +89,7 @@ class AddScheduleEventRepository{
         scheduleDay: String,
         context: Context
     ): Resource<Any?> {
-        val responseData: ApiResponseData = if (isNetWork(context)) {
+        val responseData: ApiResponseData = if (checkNetworkAvailableOrNot(context)) {
             val response = apiClient.editSchedule(  reminder = reminder,
                 location = location,
                 date = date,

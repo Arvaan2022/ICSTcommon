@@ -9,7 +9,6 @@ import com.icst.commonmodule.model.EducationList
 import com.icst.commonmodule.model.EducationResourceCategoryModel
 import com.icst.commonmodule.model.EducationResourceModel
 import com.icst.commonmodule.model.EducationVideoTaskModel
-import com.icst.commonmodule.model.GetGPHospitalCategoryModel
 import com.icst.commonmodule.model.GetVideoCountModel
 import com.icst.commonmodule.model.GpSurgeryModel
 import com.icst.commonmodule.model.ListScheduleModel
@@ -27,13 +26,6 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface ApiInterface {
-
-    @Headers("accept:application/json")
-    @GET("get-gp-hospital-category")
-    suspend fun getGpHospitalCategory(
-        @Header("Authorization") inToken: String,
-        @Header("lan") language: String
-    ): Response<GetGPHospitalCategoryModel>
 
     @Headers("accept:application/json")
     @GET("education-home")              //  RUN
