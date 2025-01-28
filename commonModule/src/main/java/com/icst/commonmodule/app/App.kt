@@ -7,7 +7,7 @@ class App:Application(){
 
     companion object{
         private var appointmnetAdded: Boolean = false
-        lateinit var instance: App
+
         var url : String = ""
         var language =""
         var token =""
@@ -24,7 +24,7 @@ class App:Application(){
 
     override fun onCreate() {
         super.onCreate()
-        instance = this
+
     }
 
 }
