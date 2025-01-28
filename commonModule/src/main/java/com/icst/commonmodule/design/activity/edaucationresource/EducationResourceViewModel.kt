@@ -27,14 +27,14 @@ class EducationResourceViewModel : ViewModel() {
     fun getEducationResourceApiCall(
         id: String, context: Context
     ) {
-//        activityBase.get()!!.showProgress()
+        activityBase.get()!!.showProgress()
         viewModelScope.launch {
             _educationResourceResponse.value =
                 educationResourcesRepository.getEducationResourceApiCall(
                     id=id,
                     context = context
                 )
-//            activityBase.get()!!.dismissProgress()
+            activityBase.get()!!.dismissProgress()
         }
     }
 }

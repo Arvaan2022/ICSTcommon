@@ -9,6 +9,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.icst.commonmodule.R
+import com.icst.commonmodule.common.ActivityBase
 import com.icst.commonmodule.databinding.ActivityLearningBinding
 import com.icst.commonmodule.model.CategoryVideo
 import com.icst.commonmodule.model.EducationContent
@@ -23,7 +24,7 @@ class LearningViewModel : ViewModel() {
 
     lateinit var educationData: EducationContent.Data.EducationData
     lateinit var categoryVideo: CategoryVideo
-     val activityBase: ObservableField<Context> = ObservableField()
+     val activityBase: ObservableField<ActivityBase> = ObservableField()
     private val _getVideoCountResponse: MutableLiveData<Resource<Any?>> = MutableLiveData()
     val getVideoCountResponse: LiveData<Resource<Any?>>
         get() {
@@ -42,12 +43,14 @@ class LearningViewModel : ViewModel() {
         slug: String,
         context: Context
     ) {
+        activityBase.get()!!.showProgress()
         viewModelScope.launch {
             _getVideoCountResponse.value = videoPlayerRepository.getVideoCount(
                 id = id,
                 slug = slug,
                 context = context
             )
+            activityBase.get()!!.dismissProgress()
         }
     }
 
@@ -55,11 +58,13 @@ class LearningViewModel : ViewModel() {
         id: String,
         context: Context
     ) {
+        activityBase.get()!!.showProgress()
         viewModelScope.launch {
             _storeVideoCountResponse.value = videoPlayerRepository.storeVideoCount(
                 videoId = id,
                 context = context
             )
+            activityBase.get()!!.dismissProgress()
         }
     }
 

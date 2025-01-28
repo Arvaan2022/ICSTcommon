@@ -24,11 +24,11 @@ class ChooseSurgeryViewModel: ViewModel() {
         }
 
     fun getRegisterSurgeryList() {
-//        activityBase.get()!!.showProgress()
+        activityBase.get()!!.showProgress()
         viewModelScope.launch {
             _getRegisterSurgeryListResponse.value =
                 chooseSurgeryRepository.getRegisterSurgeryList(activityBase.get()!!)
-//            activityBase.get()!!.dismissProgress()
+            activityBase.get()!!.dismissProgress()
         }
     }
 
@@ -42,14 +42,14 @@ class ChooseSurgeryViewModel: ViewModel() {
         }
 
     fun surgeryChangeApiCall(id:String) {
-//        activityBase.get()!!.showProgress()
+        activityBase.get()!!.showProgress()
         viewModelScope.launch {
             _surgeryChangeResponse.value =
                 chooseSurgeryRepository.surgeryChangeApiCall(
                     id= id,
                     context = activityBase.get()!!
                 )
-//            activityBase.get()!!.dismissProgress()
+            activityBase.get()!!.dismissProgress()
         }
     }
 

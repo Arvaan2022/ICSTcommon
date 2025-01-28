@@ -3,6 +3,7 @@ package com.icst.commonmodule.utils
 import android.content.Context
 import android.view.View
 import android.widget.Toast
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.icst.commonmodule.retrofit.ApiResponseData
 import com.icst.commonmodule.retrofit.Resource
@@ -40,7 +41,11 @@ object Constant {
     const val SELECTED_SCHEDULE = "schedule"
     const val SELECTED_NEVER = "never"
 
-    val logOutAction : MutableLiveData<Boolean> = MutableLiveData(false)
+    private val _logOutAction = MutableLiveData(false)
+    val logOutAction: LiveData<Boolean>
+        get() {
+            return _logOutAction
+        }
 
 
     fun handleApiData(apiData: ApiResponseData?): Resource<Any?> {
@@ -185,7 +190,8 @@ object Constant {
             }
         }
 
-        logOutAction.value = failure.errorCode==401
+        _logOutAction.value = failure.errorCode==401
+        _logOutAction.value = false
 
     }
 }

@@ -27,9 +27,11 @@ class EducationViewModel:ViewModel() {
 
     fun getEducationDataApiCall(context: Context) {
         viewModelScope.launch {
+            _educationDataResponse.value = Resource.Loading
             _educationDataResponse.value = educationRepository.getEducationData(
                context=context
             )
+            _educationDataResponse.value = Resource.Dismiss
         }
     }
 

@@ -42,10 +42,10 @@ class AddContactViewModel : ViewModel() {
 
 
     fun addContactApiCall(contact: Contact) {
-//        activityBase.get()!!.showProgress()
+        activityBase.get()!!.showProgress()
         viewModelScope.launch {
             _addContactListResponse.value = addContactRepository.addContactApiCall(contact,activityBase.get()!!)
-//            activityBase.get()!!.dismissProgress()
+            activityBase.get()!!.dismissProgress()
         }
     }
 

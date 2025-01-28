@@ -10,10 +10,12 @@ import android.util.Log
 import android.view.inputmethod.InputMethodManager
 import android.widget.ImageView
 import androidx.annotation.DrawableRes
+import androidx.appcompat.app.AppCompatDialog
 import androidx.appcompat.widget.AppCompatImageView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.icst.commonmodule.R
+import com.icst.commonmodule.common.MyCustomProgressDialog
 import java.text.SimpleDateFormat
 import java.util.Locale
 
@@ -190,4 +192,23 @@ fun generateCircleTag(context: Context, bool: Boolean): GradientDrawable {
         context.resources.getDimension(com.intuit.sdp.R.dimen._40sdp).toInt()
     )
     return shape
+}
+
+fun getProgressDialog(c: Activity): AppCompatDialog {
+    val mProgressDialog: AppCompatDialog = MyCustomProgressDialog(c)
+    mProgressDialog.setCanceledOnTouchOutside(false)
+    mProgressDialog.setCancelable(false)
+    if (!c.isDestroyed) {
+        mProgressDialog.show()
+    }
+    return mProgressDialog
+}
+
+fun dismissProgressDialog(pd: AppCompatDialog?) {
+    try {
+        if (pd != null && pd.isShowing) {
+            pd.dismiss()
+        }
+    } catch (e: Exception) {
+    }
 }

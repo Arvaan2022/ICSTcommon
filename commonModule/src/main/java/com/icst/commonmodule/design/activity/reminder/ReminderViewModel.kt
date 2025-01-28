@@ -33,20 +33,20 @@ class ReminderViewModel() : ViewModel() {
 
 
     fun listScheduleApiCall(month: Int,year:Int) {
-//        activityBase.get()!!.showProgress()
+        activityBase.get()!!.showProgress()
         viewModelScope.launch {
             _listScheduleResponse.value = reminderRepository.listScheduleApiCall(month = month,
                 year = year,activityBase.get()!!)
-//            activityBase.get()!!.dismissProgress()
+            activityBase.get()!!.dismissProgress()
         }
     }
 
     private fun deleteScheduleApiCall(id: Int) {
-//        activityBase.get()!!.showProgress()
+        activityBase.get()!!.showProgress()
         viewModelScope.launch {
             _deleteScheduleResponse.value = reminderRepository.deleteScheduleApiCall(
                 id = id,activityBase.get()!!)
-//            activityBase.get()!!.dismissProgress()
+            activityBase.get()!!.dismissProgress()
         }
     }
 

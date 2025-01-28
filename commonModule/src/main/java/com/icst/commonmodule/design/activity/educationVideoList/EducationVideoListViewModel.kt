@@ -40,14 +40,14 @@ class EducationVideoListViewModel : ViewModel() {
         name: String,
         context: Context
     ) {
-//        activityBase.get()!!.showProgress()
+        activityBase.get()!!.showProgress()
         viewModelScope.launch {
             _educationVideoListResponse.value =
                 educationVideoListRepository.getEducationVideoList(
                     name = name,
                     context = context
                 )
-//            activityBase.get()!!.dismissProgress()
+            activityBase.get()!!.dismissProgress()
         }
     }
 

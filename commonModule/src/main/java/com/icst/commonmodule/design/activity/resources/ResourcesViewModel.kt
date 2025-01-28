@@ -28,11 +28,11 @@ class ResourcesViewModel : ViewModel() {
     fun getEducationResourceCategoryApiCall(
         context: Context
     ) {
-//        activityBase.get()!!.showProgress()
+        activityBase.get()!!.showProgress()
         viewModelScope.launch {
             _resourceResponse.value = educationResourcesRepository.getEducationResourceCategoryApiCall(
                 context = context)
-//            activityBase.get()!!.dismissProgress()
+            activityBase.get()!!.dismissProgress()
         }
     }
 }

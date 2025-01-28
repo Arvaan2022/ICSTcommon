@@ -58,10 +58,10 @@ class AddScheduleEventViewModel : ViewModel() {
 
 
     fun getScheduleApiCall() {
-//        activityBase.get()!!.showProgress()
+        activityBase.get()!!.showProgress()
         viewModelScope.launch {
             _getScheduleResponse.value = addScheduleRepository.getScheduleApiCall(activityBase.get()!!)
-//            activityBase.get()!!.dismissProgress()
+            activityBase.get()!!.dismissProgress()
         }
     }
 
@@ -75,7 +75,7 @@ class AddScheduleEventViewModel : ViewModel() {
         other: String,
         scheduleDay: String
     ) {
-//        activityBase.get()!!.showProgress()
+        activityBase.get()!!.showProgress()
         viewModelScope.launch {
             _addScheduleResponse.value = addScheduleRepository.addScheduleApiCall(
                 reminder = reminder,
@@ -88,7 +88,7 @@ class AddScheduleEventViewModel : ViewModel() {
                 other = other,
                 context= activityBase.get()!!
             )
-//            activityBase.get()!!.dismissProgress()
+            activityBase.get()!!.dismissProgress()
         }
     }
 
@@ -103,7 +103,7 @@ class AddScheduleEventViewModel : ViewModel() {
         id: String,
         scheduleDay: String
     ) {
-//        activityBase.get()!!.showProgress()
+        activityBase.get()!!.showProgress()
         viewModelScope.launch {
             _editScheduleResponse.value = addScheduleRepository.editScheduleApiCall(
                 reminder = reminder,
@@ -117,7 +117,7 @@ class AddScheduleEventViewModel : ViewModel() {
                 id = id,
                 context=activityBase.get()!!
             )
-//            activityBase.get()!!.dismissProgress()
+            activityBase.get()!!.dismissProgress()
         }
     }
 

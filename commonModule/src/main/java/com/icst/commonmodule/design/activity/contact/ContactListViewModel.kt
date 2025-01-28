@@ -38,18 +38,18 @@ class ContactListViewModel : ViewModel() {
         }
 
     fun contactListApiCall() {
-//        activityBase.get()!!.showProgress()
+        activityBase.get()!!.showProgress()
         viewModelScope.launch {
             _contactListResponse.value = contactRepository.contactListApiCall(activityBase.get()!!)
-//            activityBase.get()!!.dismissProgress()
+            activityBase.get()!!.dismissProgress()
         }
     }
 
     private fun deleteContactApiCall(id: Int) {
-//        activityBase.get()!!.showProgress()
+        activityBase.get()!!.showProgress()
         viewModelScope.launch {
             _deleteContactResponse.value = contactRepository.deleteContactApiCall(id,activityBase.get()!!)
-//            activityBase.get()!!.dismissProgress()
+            activityBase.get()!!.dismissProgress()
         }
     }
 

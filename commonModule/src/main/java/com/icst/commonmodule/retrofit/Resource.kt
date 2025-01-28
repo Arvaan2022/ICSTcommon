@@ -1,7 +1,8 @@
 package com.icst.commonmodule.retrofit
 
 sealed class Resource<out T>{
-    object Loading: Resource<Nothing>()
+    data object Loading: Resource<Nothing>()
+    data object Dismiss: Resource<Nothing>()
     data class  Success<out T>(val value:T): Resource<T>()
     data class Failure(
         val isNetwork:Boolean,

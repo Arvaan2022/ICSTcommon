@@ -60,13 +60,13 @@ class VideoPlayerViewModel : ViewModel() {
         }
 
     fun getCategoryVideos(id: Int, context: Context) {
-//        activityBase.get()!!.showProgress()
+        activityBase.get()!!.showProgress()
         viewModelScope.launch {
             _categoryVideosResponse.value = videoPlayerRepository.getCategoryVideos(
                 id = id,
                 context = context
             )
-//            activityBase.get()!!.dismissProgress()
+            activityBase.get()!!.dismissProgress()
         }
     }
 
@@ -75,14 +75,14 @@ class VideoPlayerViewModel : ViewModel() {
         slug: String,
         context: Context
     ) {
-//        activityBase.get()!!.showProgress()
+        activityBase.get()!!.showProgress()
         viewModelScope.launch {
             _getVideoCountResponse.value = videoPlayerRepository.getVideoCount(
                 id = id,
                 slug = slug,
                 context = context
             )
-//            activityBase.get()!!.dismissProgress()
+            activityBase.get()!!.dismissProgress()
         }
     }
 
@@ -90,13 +90,13 @@ class VideoPlayerViewModel : ViewModel() {
         id: String,
         context: Context
     ) {
-//        activityBase.get()!!.showProgress()
+        activityBase.get()!!.showProgress()
         viewModelScope.launch {
             _storeVideoCountResponse.value = videoPlayerRepository.storeVideoCount(
                 videoId = id,
                 context = context
             )
-//            activityBase.get()!!.dismissProgress()
+            activityBase.get()!!.dismissProgress()
         }
     }
 
@@ -111,13 +111,13 @@ class VideoPlayerViewModel : ViewModel() {
         id: String,
         context: Context
     ) {
-//        activityBase.get()!!.showProgress()
+        activityBase.get()!!.showProgress()
         viewModelScope.launch {
             _getTaskEducationVideoResponse.value = videoPlayerRepository.getTaskEducationVideoApi(
                 id = id,
                 context = context
             )
-//            activityBase.get()!!.dismissProgress()
+            activityBase.get()!!.dismissProgress()
         }
     }
 

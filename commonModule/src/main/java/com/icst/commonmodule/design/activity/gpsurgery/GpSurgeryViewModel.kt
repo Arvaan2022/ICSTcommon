@@ -24,11 +24,11 @@ class GpSurgeryViewModel : ViewModel() {
         }
 
     fun getSurgeryHistoryApiCall() {
-//        activityBase.get()!!.showProgress()
+        activityBase.get()!!.showProgress()
         viewModelScope.launch {
             _getSurgeryHistoryResponse.value =
                 gpSurgeryRepository.getSurgeryHistoryApiCall(activityBase.get()!!)
-//            activityBase.get()!!.dismissProgress()
+            activityBase.get()!!.dismissProgress()
         }
     }
 }

@@ -11,6 +11,7 @@ import android.view.WindowManager
 import android.widget.EditText
 import android.window.OnBackInvokedDispatcher
 import androidx.activity.OnBackPressedCallback
+import androidx.appcompat.app.AppCompatDialog
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.content.res.ResourcesCompat
@@ -18,6 +19,8 @@ import com.facebook.drawee.backends.pipeline.Fresco
 import com.google.android.material.snackbar.Snackbar
 import com.icst.commonmodule.R
 import com.icst.commonmodule.app.DataBindingActivity
+import com.icst.commonmodule.utils.dismissProgressDialog
+import com.icst.commonmodule.utils.getProgressDialog
 import com.icst.commonmodule.utils.hideSoftKeyboard
 import java.io.Serializable
 
@@ -128,4 +131,24 @@ open class ActivityBase():DataBindingActivity() {
             }
         }
     }
+
+    private var mProgressDialog: AppCompatDialog? = null
+    fun showProgress() {
+        mProgressDialog = if (mProgressDialog == null) {
+            getProgressDialog(this@ActivityBase)
+        } else {
+            mProgressDialog!!.dismiss()
+            getProgressDialog(this@ActivityBase)
+        }
+        progressBarTouchable(false)
+
+    }
+
+    fun dismissProgress() {
+        if (mProgressDialog != null) {
+            dismissProgressDialog(mProgressDialog!!)
+            progressBarTouchable(true)
+        }
+    }
+
 }
